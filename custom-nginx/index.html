@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🚀 Kubernetes Phase 3: Stateful Workloads</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #326ce5;
+      --secondary: #00d1b2;
+      --dark: #1a1a2e;
+      --light: #f8f9fa;
+    }
+    
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    
+    .container {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      padding: 3rem;
+      max-width: 800px;
+      width: 90%;
+      margin: 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+    }
+    
+    h1 {
+      color: var(--primary);
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+      animation: fadeIn 1s ease;
+    }
+    
+    .subtitle {
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 2rem;
+      animation: fadeIn 1.2s ease;
+    }
+    
+    .kubernetes-badge {
+      background: var(--dark);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-family: 'Source Code Pro', monospace;
+      display: inline-block;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+      animation: bounce 2s infinite;
+    }
+    
+    .features {
+      text-align: left;
+      margin: 2rem 0;
+      animation: slideUp 1s ease;
+    }
+    
+    .feature {
+      display: flex;
+      align-items: center;
+      margin: 1rem 0;
+      padding: 1rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    
+    .feature:hover {
+      background: rgba(50, 108, 229, 0.1);
+      transform: translateX(5px);
+    }
+    
+    .feature-icon {
+      font-size: 1.5rem;
+      margin-right: 1rem;
+      color: var(--secondary);
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    footer {
+      margin-top: 2rem;
+      color: #666;
+      font-size: 0.9rem;
+      animation: fadeIn 1.5s ease;
+    }
+    
+    @media (max-width: 600px) {
+      .container {
+        padding: 2rem 1.5rem;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📦 Kubernetes Phase 3: Stateful Workloads</h1>
+    <p class="subtitle">Mastering StatefulSets, Jobs & CronJobs in Production</p>
+    
+    <div class="kubernetes-badge">
+      kubectl get statefulsets,pods,jobs
+    </div>
+    
+    <div class="features">
+      <div class="feature">
+        <span class="feature-icon">🔒</span>
+        <div>
+          <strong>StatefulSets</strong> - Managing stateful applications with stable network identities and persistent storage
+        </div>
+      </div>
+      
+      <div class="feature">
+        <span class="feature-icon">⏱️</span>
+        <div>
+          <strong>CronJobs</strong> - Scheduled tasks that run at specific times, just like Unix cron
+        </div>
+      </div>
+      
+      <div class="feature">
+        <span class="feature-icon">⚡</span>
+        <div>
+          <strong>Jobs</strong> - Running finite tasks to completion with automatic retry handling
+        </div>
+      </div>
+      
+      <div class="feature">
+        <span class="feature-icon">🔄</span>
+        <div>
+          <strong>Persistent Volumes</strong> - Maintaining data across pod restarts and rescheduling
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    Served from a Kubernetes StatefulSet with persistent storage | v3.0
+  </footer>
+</body>
+</html>
